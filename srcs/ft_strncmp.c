@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../include/main.h"
 
 int	ft_strncmp(char *s1, char *s2, int size)
 {

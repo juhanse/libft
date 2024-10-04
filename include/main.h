@@ -15,5 +15,6 @@ int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(char *s1, char *s2, int size);
 int		ft_atoi(char *str);
 int		ft_isalpha(int c);
+int		ft_isdigit(int c);
 
 #endif

@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../include/main.h"
 
 char	*ft_strcat(char *dest, char *src)
 {

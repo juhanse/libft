@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../include/main.h"
 
 int	ft_isalpha(int c)
 {

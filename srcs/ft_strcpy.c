@@ -1,4 +1,4 @@
-#include "main.h"
+#include "../include/main.h"
 
 char	*ft_strcpy(char *dest, char *src)
 {
