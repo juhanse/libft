@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
 #include <stdlib.h>
 
 int		ft_strlen(char *str);
@@ -14,4 +15,4 @@ int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(char *s1, char *s2, int size);
 int		ft_atoi(char *str);
 
-#endif MAIN_H
+#endif
