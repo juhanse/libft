@@ -10,5 +10,6 @@ char	*ft_strncpy(char *dest, char *src, int size);
 char	*ft_strcat(char *dest, char *src);
 char	*ft_strncat(char *dest, char *src, int size);
 char	*ft_strncat(char *dest, char *src, int size);
+int		ft_strcmp(char *s1, char *s2);
 
 #endif MAIN_H
