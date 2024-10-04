@@ -5,5 +5,7 @@
 
 int		ft_strlen(char *str);
 char	*ft_strdup(char *src);
+char	*ft_strcpy(char *dest, char *src);
+char	*ft_strncpy(char *dest, char *src, int size);
 
 #endif MAIN_H
