@@ -1,6 +1,6 @@
 #include "main.h"
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strncat(char *dest, char *src, int size)
 {
 	int	i;
 	int	j;
@@ -9,7 +9,7 @@ char	*ft_strcat(char *dest, char *src)
 	j = 0;
 	while (dest[i])
 		i++;
-	while (src[j])
+	while (src[j] && j < size)
 	{
 		dest[i] = src[j];
 		i++;
