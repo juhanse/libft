@@ -6,13 +6,13 @@
 /*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 22:24:04 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/10 22:24:12 by julienhanse      ###   ########.fr       */
+/*   Updated: 2024/10/10 22:26:36 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-void		*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t i;
 
