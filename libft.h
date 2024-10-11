@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 11:43:43 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/11 15:47:21 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/11 15:56:18 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ char	*ft_strncat(char *dest, const char *src, size_t size);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t size);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+void	*ft_calloc(size_t num, size_t size);
 int		ft_atoi(const char *str);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
