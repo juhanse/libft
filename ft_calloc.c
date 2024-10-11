@@ -6,11 +6,13 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 15:47:31 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/11 15:48:12 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/11 15:55:30 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t num, size_t size)
 {
-	
+	size_t	len;
+
+	len = num * size;
 }
