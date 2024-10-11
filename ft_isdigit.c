@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
+/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 22:22:20 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/10 22:22:20 by julienhanse      ###   ########.fr       */
+/*   Created: 2024/10/10 22:21:27 by julienhanse       #+#    #+#             */
+/*   Updated: 2024/10/11 14:00:10 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libft.h"
+#include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, int size)
+int	ft_isdigit(int c)
 {
-	int		i;
-
-	i = 0;
-	while (s1[i] && s1[i] == s2[i] && i < size)
-		i++;
-	return (s1[i] - s2[i]);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }

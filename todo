@@ -1,0 +1,9 @@
+bzero
+strchr
+strrchr
+strnchr
+memset
+memcpy
+memmove
+memchr
+memcmp
