@@ -6,22 +6,24 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 22:21:48 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/11 14:00:10 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/24 13:36:28 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int		i;
 
 	i = 0;
+	if (!dst || !src)
+		return (NULL);
 	while (src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	dst[i] = '\0';
+	return (dst);
 }

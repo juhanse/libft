@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 22:22:23 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/24 13:39:58 by juhanse          ###   ########.fr       */
+/*   Created: 2024/10/14 16:58:20 by julienhanse       #+#    #+#             */
+/*   Updated: 2024/10/24 13:38:51 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;
+	char	*buffer;
 
 	i = 0;
-	if (!dst || !src)
+	if (!s)
 		return (NULL);
-	while (src[i] && i < size)
+	buffer = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!buffer)
+		return (NULL);
+	while (s[i])
 	{
-		dst[i] = src[i];
+		buffer[i] = (*f)(i, s[i]);
 		i++;
 	}
-	while (i > size)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	buffer[i] = '\0';
+	return (buffer);
 }

@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
+/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 22:22:23 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/24 13:39:58 by juhanse          ###   ########.fr       */
+/*   Created: 2024/10/15 16:57:23 by juhanse           #+#    #+#             */
+/*   Updated: 2024/10/27 10:27:22 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t size)
+void	*ft_memchr(const void *ptr, int c, size_t size)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*p;
 
 	i = 0;
-	if (!dst || !src)
-		return (NULL);
-	while (src[i] && i < size)
+	p = (unsigned char *)ptr;
+	while (i < size)
 	{
-		dst[i] = src[i];
+		if (p[i] == (unsigned char)c)
+			return ((void *)ptr + i);
 		i++;
 	}
-	while (i > size)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	return (NULL);
 }

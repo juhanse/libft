@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
+/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 22:22:23 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/24 13:39:58 by juhanse          ###   ########.fr       */
+/*   Created: 2024/10/14 20:39:28 by julienhanse       #+#    #+#             */
+/*   Updated: 2024/10/27 10:23:46 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t size)
+char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
+	char	search;
 
 	i = 0;
-	if (!dst || !src)
-		return (NULL);
-	while (src[i] && i < size)
-	{
-		dst[i] = src[i];
+	search = (char) c;
+	while (s[i] && s[i] != search)
 		i++;
-	}
-	while (i > size)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	if (s[i] == search)
+		return ((char *) s + i);
+	return (NULL);
 }

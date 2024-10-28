@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 22:21:52 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/27 20:05:57 by julienhanse      ###   ########.fr       */
+/*   Created: 2024/10/14 20:44:16 by julienhanse       #+#    #+#             */
+/*   Updated: 2024/10/27 20:06:37 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	len;
 	char	*buffer;
+	size_t	s1_len;
+	size_t	s2_len;
 
-	len = ft_strlen(src);
-	buffer = (char *)malloc((len + 1) * sizeof(char));
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
+		return ((char *)s2);
+	if (!s2)
+		return ((char *)s1);
+	s1_len = ft_strlen(s1);
+	s2_len = ft_strlen(s2);
+	buffer = malloc((s1_len + s2_len + 1) * sizeof(char));
 	if (!buffer)
 		return (NULL);
-	ft_strlcpy(buffer, src, len + 1);
+	ft_strlcpy(buffer, s1, s1_len + 1);
+	ft_strlcat(buffer, s2, s1_len + s2_len + 1);
 	return (buffer);
 }
