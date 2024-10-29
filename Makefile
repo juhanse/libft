@@ -6,7 +6,7 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/26 17:33:59 by juhanse           #+#    #+#              #
-#    Updated: 2024/10/26 17:43:06 by juhanse          ###   ########.fr        #
+#    Updated: 2024/10/29 12:38:43 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,23 +30,22 @@ BONUS_FILES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 		ft_lstclear_bonus.c ft_lstiter_bonus.c \
 		ft_lstmap_bonus.c
 
-LIBFT_BONUS = $(SOURCES_FILES) $(BONUS_FILES)
 LIBFT_OBJS = $(SOURCES_FILES:.c=.o)
-LIBFT_OBJS_BONUS = $(LIBFT_BONUS:.c=.o)
+LIBFT_OBJS_BONUS = $(BONUS_FILES:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(LIBFT_OBJS)
 	ar -rsc $(NAME) $(LIBFT_OBJS)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
 bonus: $(LIBFT_OBJS_BONUS)
 	ar -rsc $(NAME) $(LIBFT_OBJS_BONUS)
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
-	rm -f $(LIBFT_OBJS_BONUS)
+	rm -f $(LIBFT_OBJS) $(LIBFT_OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)

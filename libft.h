@@ -6,14 +6,13 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 11:43:43 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/27 13:53:53 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/29 12:42:18 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
