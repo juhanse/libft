@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
+/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 21:47:35 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/29 10:43:54 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/30 00:09:39 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ static size_t	ft_count_digit(int n)
 
 char	*ft_itoa(int n)
 {
-	long int	num;
-	size_t		digits;
-	char		*buffer;
+	long	num;
+	size_t	digits;
+	char	*buffer;
 
 	num = n;
 	digits = ft_count_digit(n);
