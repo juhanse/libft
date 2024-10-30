@@ -6,7 +6,7 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/26 17:33:59 by juhanse           #+#    #+#              #
-#    Updated: 2024/10/29 12:38:43 by juhanse          ###   ########.fr        #
+#    Updated: 2024/10/30 14:39:11 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,11 +35,11 @@ LIBFT_OBJS_BONUS = $(BONUS_FILES:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(LIBFT_OBJS)
-	ar -rsc $(NAME) $(LIBFT_OBJS)
+$(NAME): $(LIBFT_OBJS) $(HEADER)
+	ar rcs $(NAME) $(LIBFT_OBJS)
 
-bonus: $(LIBFT_OBJS_BONUS)
-	ar -rsc $(NAME) $(LIBFT_OBJS_BONUS)
+bonus: $(NAME) $(LIBFT_OBJS_BONUS)
+	ar rcs $(NAME) $(LIBFT_OBJS_BONUS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
