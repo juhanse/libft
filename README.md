@@ -1,3 +1,18 @@
-# My C library ✅
+# Libft ✅
 
-<img width="1252" alt="Screen Shot 2024-11-06 at 12 29 10 PM" src="https://github.com/user-attachments/assets/13939543-9d1b-44cc-abca-022cc598c276">
+Welcome to my **Libft**, a project where I recreated all the basic functions in C.  
+
+## Features
+
+- Libraries:
+  - `string.h`
+  - `stdlib.h`
+  - `unistd.h`
+  - `ctype.h`
+
+- Additional functions are also available
+- A bonus section was carried out on structures
+
+## Disclaimer
+This project is for educational purposes only.
+It is not intended to be copied or used in production. Learn, don’t cheat! ❌
